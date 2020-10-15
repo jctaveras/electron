@@ -868,6 +868,7 @@ void App::BrowserChildProcessCrashedOrKilled(
   details.Set("type", content::GetProcessTypeNameInEnglish(data.process_type));
   details.Set("reason", info.status);
   details.Set("exitCode", info.exit_code);
+  details.Set("metricsName", data.metrics_name);
   if (!data.name.empty()) {
     details.Set("name", data.name);
   }

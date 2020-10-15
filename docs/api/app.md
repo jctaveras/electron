@@ -432,8 +432,10 @@ Returns:
     * `integrity-failure` - Windows code integrity checks failed
   * `exitCode` Number - The exit code for the process
       (e.g. status from waitpid if on posix, from GetExitCodeProcess on Windows).
-  * `name` String (optional) - The name of the process. i.e. for plugins it might be Flash.
-    Examples for utility: `Audio Service`, `Content Decryption Module Service`, `Network Service`, `Video Capture`, etc.
+  * `metricsName` String (optional) - The non-localized name of the process used for metrics reporting.
+  * `name` String (optional) - The name of the process. i.e. for plugins it might be Flash,
+      while for for workers it might be the domain that it's from.
+      Examples for utility: `Audio Service`, `Content Decryption Module Service`, `Network Service`, `Video Capture`, etc.
 
 Emitted when the child process unexpectedly disappears. This is normally
 because it was crashed or killed. It does not include renderer processes.
